@@ -16,10 +16,10 @@
     },
     "autoload" : {
         "psr-0" : {
-            "BudapestBar\\Bundle\\UgyvedKapuClientBundle" : ""
+            "BudapestBar\\Bundle\\UgyvedkapuClientBundle" : ""
         }
     },
-    "target-dir" : "BudapestBar/Bundle/UgyvedKapuClientBundle",
+    "target-dir" : "BudapestBar/Bundle/UgyvedkapuClientBundle",
     "repositories" : [{
     }],
     "extra" : {
