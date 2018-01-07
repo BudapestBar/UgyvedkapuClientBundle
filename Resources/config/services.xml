@@ -1,0 +1,31 @@
+<?xml version="1.0" ?>
+
+<container xmlns="http://symfony.com/schema/dic/services"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
+
+    <services>
+
+        <defaults autowire="true" autoconfigure="true" public="false" />
+<!--
+        <prototype namespace="BudapestBar\Bundle\UgyvedkapuClientBundle\" resource="../../../../../../src/BudapestBar/Bundle/UgyvedkapuClientBundle/*" exclude="../../../../../../src/BudapestBar/Bundle/UgyvedkapuClientBundle/{Entity,Repository,Tests}" />
+
+
+        <prototype namespace="BudapestBar\Bundle\UgyvedkapuClientBundle\Controller\" resource="../../../../../../src/BudapestBar/Bundle/UgyvedkapuClientBundle/Controller" public="true">
+            <tag name="controller.service_arguments" />
+        </prototype>
+        <prototype namespace="BudapestBar\Bundle\UgyvedkapuClientBundle\" resource="../../../../../../src/BudapestBar/Bundle/UgyvedkapuClientBundle/*" exclude="../../../../../../src/BudapestBar/Bundle/UgyvedkapuClientBundle/{Entity,Repository,Tests}" />
+-->
+
+        <service id="BudapestBar\Bundle\UgyvedkapuClientBundle\Client\UgyvedkapuOAuthProvider" autowire="true" public="true">
+            <argument></argument>
+            <call method="setEnv">
+                <argument>%kernel.environment%</argument>
+            </call>
+        </service>
+        <service id="BudapestBar\Bundle\UgyvedkapuClientBundle\Security\UgyvedkapuAuthenticator" autowire="true" public="true" />
+        <service id="BudapestBar\Bundle\UgyvedkapuClientBundle\Security\UgyvedkapuProvider" autowire="true" public="true" />
+    </services>
+
+
+</container>

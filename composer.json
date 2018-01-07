@@ -1,0 +1,30 @@
+{
+    "name" : "budapestbar/ugyvedkapu-client-bundle",
+    "description" : "Ugyvedkapu kliens bunlde",
+    "type" : "symfony-bundle",
+    "authors" : [{
+        "name" : "Borbély Gábor",
+        "email" : "gabor.borbely@bpbar.hu"
+    }],
+    "keywords" : [
+        "ugyvedkapu client bundle"
+    ],
+    "license" : [
+        "MIT"
+    ],
+    "require" : {
+    },
+    "autoload" : {
+        "psr-0" : {
+            "BudapestBar\\Bundle\\UgyvedKapuClientBundle" : ""
+        }
+    },
+    "target-dir" : "BudapestBar/Bundle/UgyvedKapuClientBundle",
+    "repositories" : [{
+    }],
+    "extra" : {
+    "branch-alias" : {
+            "dev-master" : "some_version-dev"
+        }
+    }
+}
